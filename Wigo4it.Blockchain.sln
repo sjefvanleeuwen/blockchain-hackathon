@@ -26,12 +26,37 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "img", "img", "{E0AA9B36-1AF
 		doc\img\wallet.svg = doc\img\wallet.svg
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EA146503-3052-4C30-B4D7-A58B3625A1DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Wigo4It.Blockchain.Core", "Wigo4It.Blockchain.Core", "{DAF0F7E6-4724-401A-8805-EF869978DD2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wigo4It.Blockchain.Core", "src\Wigo4It.Blockchain.Core\Wigo4It.Blockchain.Core\Wigo4It.Blockchain.Core.csproj", "{85BB0058-7295-4624-9571-591CF723B54C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wigo4It.Blockchain.Core.Tests", "src\Wigo4It.Blockchain.Core\Wigo4It.Blockchain.Core.Tests\Wigo4It.Blockchain.Core.Tests.csproj", "{CDBB8C50-E063-4C31-896F-9A114F1D1D1F}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{85BB0058-7295-4624-9571-591CF723B54C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85BB0058-7295-4624-9571-591CF723B54C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85BB0058-7295-4624-9571-591CF723B54C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85BB0058-7295-4624-9571-591CF723B54C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDBB8C50-E063-4C31-896F-9A114F1D1D1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDBB8C50-E063-4C31-896F-9A114F1D1D1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDBB8C50-E063-4C31-896F-9A114F1D1D1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDBB8C50-E063-4C31-896F-9A114F1D1D1F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E0AA9B36-1AF7-4DF0-89B0-EC032E189800} = {008FBE37-F881-4D29-A5B8-395EC15A5D5F}
+		{DAF0F7E6-4724-401A-8805-EF869978DD2D} = {EA146503-3052-4C30-B4D7-A58B3625A1DD}
+		{85BB0058-7295-4624-9571-591CF723B54C} = {DAF0F7E6-4724-401A-8805-EF869978DD2D}
+		{CDBB8C50-E063-4C31-896F-9A114F1D1D1F} = {DAF0F7E6-4724-401A-8805-EF869978DD2D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C8B06579-8106-4B12-8C27-4BD60B774D1C}
