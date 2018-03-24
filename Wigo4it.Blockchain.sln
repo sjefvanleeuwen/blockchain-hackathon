@@ -6,11 +6,32 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{81917E6A-F7C9-4EB4-A3E4-188AA49876A6}"
 	ProjectSection(SolutionItems) = preProject
 		LICENSE = LICENSE
+		readme.md = readme.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{008FBE37-F881-4D29-A5B8-395EC15A5D5F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "img", "img", "{E0AA9B36-1AF7-4DF0-89B0-EC032E189800}"
+	ProjectSection(SolutionItems) = preProject
+		doc\img\alice.svg = doc\img\alice.svg
+		doc\img\bob.svg = doc\img\bob.svg
+		doc\img\eline.svg = doc\img\eline.svg
+		doc\img\ethereum.svg = doc\img\ethereum.svg
+		doc\img\hack-to-the-future.png = doc\img\hack-to-the-future.png
+		doc\img\hugo.svg = doc\img\hugo.svg
+		doc\img\jahir.svg = doc\img\jahir.svg
+		doc\img\logo-wigo4it.png = doc\img\logo-wigo4it.png
+		doc\img\richard.svg = doc\img\richard.svg
+		doc\img\sabella.svg = doc\img\sabella.svg
+		doc\img\wallet.svg = doc\img\wallet.svg
 	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E0AA9B36-1AF7-4DF0-89B0-EC032E189800} = {008FBE37-F881-4D29-A5B8-395EC15A5D5F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C8B06579-8106-4B12-8C27-4BD60B774D1C}
