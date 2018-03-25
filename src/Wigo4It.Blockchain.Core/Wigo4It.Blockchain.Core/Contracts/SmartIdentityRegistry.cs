@@ -5,7 +5,7 @@ using Nethereum.ABI.FunctionEncoding.Attributes;
 using Nethereum.Web3;
 using Nethereum.Contracts;
 
-namespace DefaultNamespace
+namespace Wigo4It.Blockchain.Core.Contracts
 {
    public class SmartIdentityRegistryService
    {

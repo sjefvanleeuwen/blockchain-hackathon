@@ -182,6 +182,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GlobalFeatureSteps.cs" />
+    <Compile Include="SelfRelianceSteps.cs" />
+    <Compile Include="Services.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Services.feature</DependentUpon>
+    </Compile>
     <Compile Include="ContractMultiplication.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -192,6 +199,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Services.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Services.feature.cs</LastGenOutput>
+    </None>
     <None Include="ContractMultiplication.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>ContractMultiplication.feature.cs</LastGenOutput>
@@ -207,6 +218,12 @@
     <None Include="SpecRunTestProfile_2011_09.xsd">
       <SubType>Designer</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Wigo4It.Blockchain.Core\Wigo4It.Blockchain.Core.csproj">
+      <Project>{85BB0058-7295-4624-9571-591CF723B54C}</Project>
+      <Name>Wigo4It.Blockchain.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
