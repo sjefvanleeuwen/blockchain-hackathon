@@ -1,5 +1,4 @@
 ﻿using System;
-using DefaultNamespace;
 using Nethereum.Hex.HexTypes;
 using Nethereum.Web3;
 using TechTalk.SpecFlow;

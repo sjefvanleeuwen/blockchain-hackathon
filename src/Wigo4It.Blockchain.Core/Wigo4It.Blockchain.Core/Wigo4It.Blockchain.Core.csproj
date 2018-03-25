@@ -86,21 +86,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contracts\Migrations.cs" />
-    <Compile Include="Contracts\SmartIdentity.cs" />
-    <Compile Include="Contracts\SmartIdentityRegistry.cs" />
+    <Compile Include="Contracts\SmartIdentity\Migrations.cs" />
+    <Compile Include="Contracts\Calc\Multiplication.cs" />
+    <Compile Include="Contracts\SmartIdentity\SmartIdentity.cs" />
+    <Compile Include="Contracts\SmartIdentity\SmartIdentityRegistry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Contracts\Migrations.abi" />
-    <None Include="Contracts\Migrations.bin" />
-    <None Include="Contracts\Migrations.json" />
-    <None Include="Contracts\SmartIdentity.abi" />
-    <None Include="Contracts\SmartIdentity.bin" />
-    <None Include="Contracts\SmartIdentity.json" />
-    <None Include="Contracts\SmartIdentityRegistry.abi" />
-    <None Include="Contracts\SmartIdentityRegistry.bin" />
-    <None Include="Contracts\SmartIdentityRegistry.json" />
+    <None Include="Contracts\SmartIdentity\Migrations.abi" />
+    <None Include="Contracts\SmartIdentity\Migrations.bin" />
+    <None Include="Contracts\SmartIdentity\Migrations.json" />
+    <None Include="Contracts\SmartIdentity\SmartIdentity.abi" />
+    <None Include="Contracts\SmartIdentity\SmartIdentity.bin" />
+    <None Include="Contracts\SmartIdentity\SmartIdentity.json" />
+    <None Include="Contracts\SmartIdentity\SmartIdentityRegistry.abi" />
+    <None Include="Contracts\SmartIdentity\SmartIdentityRegistry.bin" />
+    <None Include="Contracts\SmartIdentity\SmartIdentityRegistry.json" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
