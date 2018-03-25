@@ -1,4 +1,24 @@
-<img src="./doc/img/hack-to-the-future.png">
+<p align="center">
+ <img src="./doc/img/logo-wigo4it.png">
+ <img src="./doc/img/hack-to-the-future.png">
+ <img src="./doc/img/ethereum.svg" width="128" height="128"> 
+</p>
+
+# Blockchain Hackathon
+
+https://github.com/wigo4it/blockchain-hackathon is the official open source repository for our blockchain events.
+
+Social services in the Netherlands have launched an offensive with the aim of improving service provision towards customers. This can be done by reducing bureaucracy and working in a more customer-oriented manner, amongst other things. ICT plays a crucial part in this.
+
+The most noticeable initiative in this area is that taken by the four largest Dutch municipalities: Amsterdam, Rotterdam, Utrecht and The Hague. The social services of this G4 have joined forces to form the cooperation Wigo4it: an acronym for the Dutch words Werk, Inkomen, G4, voor Informatietechnologie, which mean work, income, G4, for information technology.
+
+Within the context of the Work and Social Assistance Act (Wwb), the G4's combined social services are responsible for a third of all people entitled to benefits. Wigo4it also provides support in the health-care policy area.
+
+# Current Status
+
+Currently we are building the Core components, the core should be agnostic but is first build to support Ethereum.
+Together with ICTU / Discpl.org we are putting together a format and might adapt ther ethereum contracts in this core.
+discpl can be found on github at: https://github.com/discipl/
 
 # Development methods and toolchain 
 
