@@ -32,7 +32,7 @@ For the hackathons we use the following toolset:
 
 # Personas
 
-Hackaton challenges inherently develop our personas on the blockchain. Personas enable us to model complex processes as progress around feature driven development. Although it's unknown at this time what the challenges will be, they will be focussed around social development within the three work domains WIGO4IT operates in, being: Care, Work and Income.
+Hackaton challenges inherently develop our personas on the blockchain. Personas enable us to model complex processes as they progress around feature driven development. Although it's unknown at this time what the challenges will be, they will be focussed around social development within the three work domains WIGO4IT operates in, being: Care, Work and Income.
 
 As a precondition, each persona is setup with at least their picture, first name and and Ethereum address.
 
