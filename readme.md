@@ -1,6 +1,6 @@
 <p align="center">
  <img src="./doc/img/logo-wigo4it.png">
- <img src="./doc/img/hack-to-the-future.png">
+ <br/>
  <img src="./doc/img/ethereum.svg" width="128" height="128"> 
 </p>
 
@@ -16,26 +16,24 @@ Within the context of the Work and Social Assistance Act (Wwb), the G4's combine
 
 # Current Status
 
-Currently we are building the Core components, the core should be agnostic but is first build to support Ethereum.
-Together with ICTU / Discpl.org we are putting together a format and might adapt ther ethereum contracts in this core.
-discpl can be found on github at: https://github.com/discipl/
+Currently we are building the Core components, the core should be agnostic but is initially built to support Ethereum. These core components are then used to simplify programming the blockchain. The teams can then focus more on the business case challenge (Feature driven) rather than having to do all the complex plumbing. Although it is always possible to bring your own smart contracts and ETH node such as GETH tooling to the challenges, surprise us! :)
 
 # Development methods and toolchain 
 
-For the hackathons we use the following toolset:
+For the hackathons we primarily use the following toolset:
 
-* Feature driven development
-  * Use of Personas in Specflow / Gherkin
+* Feature driven development (FDD)
+  * Use of Personas in <a href="https://github.com/techtalk/SpecFlow" title="Specflow">Specflow</a> / Gherkin
 * Microsoft .NET c#
 * Visual Studio 2017 and Visual Studio code IDE
 * Blockchain technology
-  * <a href="hhttps://github.com/Nethereum/" title="NETHEREUM">NETHEREUM</a> (TestRPC for testing)
+  * <a href="https://github.com/Nethereum/" title="NETHEREUM">NETHEREUM</a> (<a href="https://github.com/Nethereum/Nethereum.TestRPCRunner" title="TestRPCRunner">TestRPCRunner</a>  for testing)
   * <a href="https://github.com/SmartIdentity/smartId-contracts" title="Smart Identity">Smart Identity</a> contracts
-  * <a href="https://github.com/Nethereum/abi-code-genabi-gen" title="abi-code-gen">abi-code-gen</a> for binding .NET to solidity smart-contracts 
+  * <a href="https://github.com/Nethereum/abi-code-gen" title="abi-code-gen">abi-code-gen</a> for binding .NET to solidity smart-contracts 
 
 # Personas
 
-Hackaton challenges inherently develop our personas on the blockchain. Personas enable us to model complex processes as progress around feature driven development. Although it's unknown at this time what the challenges will be, they will be focussed around social development within the three work domains WIGO4IT operates in, being: Care, Work and Income.
+Hackaton challenges inherently develop our personas on the blockchain. Personas enable us to model complex processes as they progress around feature driven development. Although it's unknown at this time what the challenges will be, they will be focussed around social development within the three work domains WIGO4IT operates in, being: Care, Work and Income.
 
 As a precondition, each persona is setup with at least their picture, first name and and Ethereum address.
 
