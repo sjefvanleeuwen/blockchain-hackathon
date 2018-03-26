@@ -197,6 +197,7 @@
     <Compile Include="ContractMultiplicationSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitTests\ContractDeploymentTests.cs" />
+    <Compile Include="UnitTests\EndorsementTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

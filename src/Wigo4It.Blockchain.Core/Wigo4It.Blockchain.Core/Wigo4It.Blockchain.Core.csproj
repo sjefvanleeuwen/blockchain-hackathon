@@ -90,6 +90,7 @@
     <Compile Include="Contracts\Calc\Multiplication.cs" />
     <Compile Include="Contracts\SmartIdentity\SmartIdentity.cs" />
     <Compile Include="Contracts\SmartIdentity\SmartIdentityRegistry.cs" />
+    <Compile Include="Extensions\HashExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
