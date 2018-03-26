@@ -16,9 +16,7 @@ Within the context of the Work and Social Assistance Act (Wwb), the G4's combine
 
 # Current Status
 
-Currently we are building the Core components, the core should be agnostic but is first build to support Ethereum.
-Together with ICTU / Discpl.org we are putting together a format and might adapt ther ethereum contracts in this core.
-discpl can be found on github at: https://github.com/discipl/
+Currently we are building the Core components, the core should be agnostic but is initially build to support Ethereum.
 
 # Development methods and toolchain 
 
