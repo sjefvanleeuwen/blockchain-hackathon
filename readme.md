@@ -15,7 +15,7 @@ Within the context of the Work and Social Assistance Act (Wwb), the G4's combine
 
 # Current Status
 
-Currently we are building the Core components, the core should be agnostic but is initially build to support Ethereum. These core components are then used to simplify programming blockchain. The teams can then focus more on the business case challenge (Feature driven) rather than having to do all the complex plumbing. Although it is always possible to bring your own smart contracts and ETH node such as GETH tooling to the challenges, surprise us! :)
+Currently we are building the Core components, the core should be agnostic but is initially build to support Ethereum. These core components are then used to simplify programming the blockchain. The teams can then focus more on the business case challenge (Feature driven) rather than having to do all the complex plumbing. Although it is always possible to bring your own smart contracts and ETH node such as GETH tooling to the challenges, surprise us! :)
 
 # Development methods and toolchain 
 
