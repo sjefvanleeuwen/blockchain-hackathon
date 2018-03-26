@@ -27,7 +27,7 @@ For the hackathons we primarily use the following toolset:
 * Microsoft .NET c#
 * Visual Studio 2017 and Visual Studio code IDE
 * Blockchain technology
-  * <a href="https://github.com/Nethereum/" title="NETHEREUM">NETHEREUM</a> (TestRPC for testing)
+  * <a href="https://github.com/Nethereum/" title="NETHEREUM">NETHEREUM</a> (<a href="https://github.com/Nethereum/Nethereum.TestRPCRunner" title="TestRPCRunner">TestRPCRunner</a>  for testing)
   * <a href="https://github.com/SmartIdentity/smartId-contracts" title="Smart Identity">Smart Identity</a> contracts
   * <a href="https://github.com/Nethereum/abi-code-gen" title="abi-code-gen">abi-code-gen</a> for binding .NET to solidity smart-contracts 
 
