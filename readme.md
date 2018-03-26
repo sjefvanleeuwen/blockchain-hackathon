@@ -28,7 +28,7 @@ For the hackathons we use the following toolset:
 * Blockchain technology
   * <a href="hhttps://github.com/Nethereum/" title="NETHEREUM">NETHEREUM</a> (TestRPC for testing)
   * <a href="https://github.com/SmartIdentity/smartId-contracts" title="Smart Identity">Smart Identity</a> contracts
-  * <a href="https://github.com/Nethereum/abi-code-genabi-gen" title="abi-code-gen">abi-code-gen</a> for binding .NET to solidity smart-contracts 
+  * <a href="https://github.com/Nethereum/abi-code-gen" title="abi-code-gen">abi-code-gen</a> for binding .NET to solidity smart-contracts 
 
 # Personas
 
