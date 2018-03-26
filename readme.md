@@ -22,11 +22,11 @@ Currently we are building the Core components, the core should be agnostic but i
 For the hackathons we use the following toolset:
 
 * Feature driven development
-  * Use of Personas in Specflow / Gherkin
+  * Use of Personas in <a href="https://github.com/techtalk/SpecFlow" title="Specflow">Specflow</a> / Gherkin
 * Microsoft .NET c#
 * Visual Studio 2017 and Visual Studio code IDE
 * Blockchain technology
-  * <a href="hhttps://github.com/Nethereum/" title="NETHEREUM">NETHEREUM</a> (TestRPC for testing)
+  * <a href="https://github.com/Nethereum/" title="NETHEREUM">NETHEREUM</a> (TestRPC for testing)
   * <a href="https://github.com/SmartIdentity/smartId-contracts" title="Smart Identity">Smart Identity</a> contracts
   * <a href="https://github.com/Nethereum/abi-code-gen" title="abi-code-gen">abi-code-gen</a> for binding .NET to solidity smart-contracts 
 
