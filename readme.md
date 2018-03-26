@@ -19,9 +19,9 @@ Currently we are building the Core components, the core should be agnostic but i
 
 # Development methods and toolchain 
 
-For the hackathons we use the following toolset:
+For the hackathons we primarily use the following toolset:
 
-* Feature driven development
+* Feature driven development (FDD)
   * Use of Personas in <a href="https://github.com/techtalk/SpecFlow" title="Specflow">Specflow</a> / Gherkin
 * Microsoft .NET c#
 * Visual Studio 2017 and Visual Studio code IDE
