@@ -1,5 +1,6 @@
 <p align="center">
  <img src="./doc/img/logo-wigo4it.png">
+ <br/>
  <img src="./doc/img/ethereum.svg" width="128" height="128"> 
 </p>
 
