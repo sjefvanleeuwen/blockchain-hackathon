@@ -66,3 +66,5 @@ Scenario: Obtain product endorsment
 	And "Eline" gives an endorsement for product "Electric Bike"
 	When "Jahir" asks if the endorsement is valid
 	Then the result should be "True"
+
+<script src="https://gist.github.com/sjefvanleeuwen/5e66967af4d282d75b185b7f11b75f6a.js"></script>
