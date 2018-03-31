@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Nethereum.Hex.HexTypes;
 
-namespace Wigo4It.Blockchain.Core.Contracts.EphimerisLynx
+namespace Wigo4It.Blockchain.Core.Contracts.EphemerisLynx
 {
     interface ITransactionService
     {

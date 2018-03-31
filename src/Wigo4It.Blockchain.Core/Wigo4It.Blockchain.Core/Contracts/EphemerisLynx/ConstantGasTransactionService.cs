@@ -2,7 +2,7 @@
 using Nethereum.Hex.HexTypes;
 using Nethereum.Web3;
 
-namespace Wigo4It.Blockchain.Core.Contracts.EphimerisLynx
+namespace Wigo4It.Blockchain.Core.Contracts.EphemerisLynx
 {
     class ConstantGasTransactionService : ITransactionService
     {

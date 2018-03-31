@@ -6,7 +6,7 @@ using Nethereum.RPC.Eth.DTOs;
 using Nethereum.RPC.Eth.Services;
 using Nethereum.Web3;
 
-namespace Wigo4It.Blockchain.Core.Contracts.EphimerisLynx
+namespace Wigo4It.Blockchain.Core.Contracts.EphemerisLynx
 {
     class TransactionService : ITransactionService
     {
