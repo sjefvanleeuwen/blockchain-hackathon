@@ -51,3 +51,20 @@ As a precondition, each persona is setup with at least their picture, first name
 Wallet icons made by <a href="https://www.flaticon.com/authors/pixel-buddha" title="Pixel Buddha">Pixel Buddha</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 
 Persona icons made by <a href="https://www.linkedin.com/in/svanleeuwen/" title="Sjef van Leeuwen">Sjef van leeuwen</a> from <a href="https://www.wigo4it.nl/" title="WIGO4IT">www.wigo4it.nl</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a> using Avatar Creator</div>
+
+# Minimal Accepted Case Scenario
+
+As minimal acceptance for a solution on blockchain to work, we give a Gherkin style example that will create the neccessary fetature steps in our test environment and test it against the Web3 NETHERERUM interface using the TestRPC.
+
+@needsTestRPC
+Feature: Self reliance
+	Citizens that are part of the social care act need products and services to be self reliant
+	For this they receive endorsements from district nurses and their township 
+
+Scenario: Obtain product endorsment
+	Given "Richard" gets an indication for the social care act from "Bob"
+	And "Eline" gives an endorsement for product "Electric Bike"
+	When "Jahir" asks if the endorsement is valid
+	Then the result should be "True"
+
+<script src="https://gist.github.com/sjefvanleeuwen/5e66967af4d282d75b185b7f11b75f6a.js"></script>
