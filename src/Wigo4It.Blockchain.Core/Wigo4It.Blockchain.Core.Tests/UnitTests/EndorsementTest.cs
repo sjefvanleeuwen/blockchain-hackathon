@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Nethereum.Hex.HexTypes;
+using Nethereum.RPC.Eth.DTOs;
 using Nethereum.TestRPCRunner;
 using Nethereum.Web3;
 using Wigo4It.Blockchain.Core.Contracts;
@@ -52,7 +53,14 @@ namespace Wigo4It.Blockchain.Core.Tests.UnitTests
             owner = addresses[0];
             endorser = addresses[1];
             thirdparty = addresses[2];
+
+            Assert.IsFalse(string.IsNullOrEmpty(owner));
+            Assert.IsFalse(string.IsNullOrEmpty(endorser));
+            Assert.IsFalse(string.IsNullOrEmpty(thirdparty));
+
         }
+
+        private TransactionReceipt _contract;
 
         public void ShouldDeployContractForOwnerWithEnoughGasAndReturnReceipt()
         {
@@ -61,14 +69,25 @@ namespace Wigo4It.Blockchain.Core.Tests.UnitTests
             var transactionHash =
                 SmartIdentityService.DeployContractAsync(web3, owner, gas).Result;
             Assert.IsNotNull(transactionHash);
-            var receipt = web3.Eth.Transactions.GetTransactionReceipt.SendRequestAsync(transactionHash).Result;
-            Assert.IsNotNull(receipt);
+            _contract = web3.Eth.Transactions.GetTransactionReceipt.SendRequestAsync(transactionHash).Result;
+            Assert.IsNotNull(_contract);
         }
 
         public void ShouldAddAnAttributeForOwner()
         {
-            var s = new SmartIdentityService(web3, owner);
-            var t = s.AddAttributeAsync(owner, attributeHash1,gas).Result;
+            var contract = web3.Eth.GetContract(SmartIdentityService.ABI, _contract.ContractAddress);
+            var evt = contract.GetEvent("ChangeNotification");
+            var f = contract.GetFunction("addAttribute");
+           // var g = f.EstimateGasAsync().Result;
+       
+            //var receipt = f.SendTransactionAndWaitForReceiptAsync(
+            //    owner,
+            //    new HexBigInteger(900000),
+            //    new HexBigInteger(1),new HexBigInteger("0xca02b2202ffaacbd499438ef6d594a48f7a7631b60405ec8f30a0d7c096d54d5")).Result;
+
+            //var filterInput =
+            //    evt.CreateFilterInput(new BlockParameter(receipt.BlockNumber), BlockParameter.CreateLatest());
+            //var logs = evt.GetAllChanges<ChangeNotificationEventDTO>(filterInput).Result;
         }
     }
 }

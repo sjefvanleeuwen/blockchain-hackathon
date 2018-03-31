@@ -28,6 +28,12 @@ namespace Wigo4It.Blockchain.Core.Contracts
             this.contract = web3.Eth.GetContract(ABI, address);
         }
 
+        /// <summary>
+        /// This function gives the override address the ability to change owner.
+        /// This could allow the identity to be moved to a multi-sig contract.
+        /// See https://github.com/ethereum/dapp-bin/blob/master/wallet/wallet.sol
+        /// for a multi-sig wallet example. </summary>
+        /// <returns></returns>
         public Function GetFunctionSetOwner() {
             return contract.GetFunction("setOwner");
         }
