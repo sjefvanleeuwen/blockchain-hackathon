@@ -34,6 +34,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wigo4It.Blockchain.Core", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wigo4It.Blockchain.Core.Tests", "src\Wigo4It.Blockchain.Core\Wigo4It.Blockchain.Core.Tests\Wigo4It.Blockchain.Core.Tests.csproj", "{CDBB8C50-E063-4C31-896F-9A114F1D1D1F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tutorials", "tutorials", "{9C2A2C57-1651-4E26-BC5D-9B6681D3F1E2}"
+	ProjectSection(SolutionItems) = preProject
+		doc\tutorials\first-contract.md = doc\tutorials\first-contract.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "img", "img", "{70524B2C-16D6-4318-88DA-6404CD027A01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +64,8 @@ Global
 		{DAF0F7E6-4724-401A-8805-EF869978DD2D} = {EA146503-3052-4C30-B4D7-A58B3625A1DD}
 		{85BB0058-7295-4624-9571-591CF723B54C} = {DAF0F7E6-4724-401A-8805-EF869978DD2D}
 		{CDBB8C50-E063-4C31-896F-9A114F1D1D1F} = {DAF0F7E6-4724-401A-8805-EF869978DD2D}
+		{9C2A2C57-1651-4E26-BC5D-9B6681D3F1E2} = {008FBE37-F881-4D29-A5B8-395EC15A5D5F}
+		{70524B2C-16D6-4318-88DA-6404CD027A01} = {9C2A2C57-1651-4E26-BC5D-9B6681D3F1E2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C8B06579-8106-4B12-8C27-4BD60B774D1C}
