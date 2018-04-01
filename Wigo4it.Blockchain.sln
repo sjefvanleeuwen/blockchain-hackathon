@@ -40,6 +40,29 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tutorials", "tutorials", "{
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "img", "img", "{70524B2C-16D6-4318-88DA-6404CD027A01}"
+	ProjectSection(SolutionItems) = preProject
+		doc\tutorials\img\2.PNG = doc\tutorials\img\2.PNG
+		doc\tutorials\img\chrome-extension-etherwallet.PNG = doc\tutorials\img\chrome-extension-etherwallet.PNG
+		doc\tutorials\img\ganache-accounts.png = doc\tutorials\img\ganache-accounts.png
+		doc\tutorials\img\ganache-contract-transaction.png = doc\tutorials\img\ganache-contract-transaction.png
+		doc\tutorials\img\ganache-contract-transaction2.png = doc\tutorials\img\ganache-contract-transaction2.png
+		doc\tutorials\img\ganache-contract-transaction3.png = doc\tutorials\img\ganache-contract-transaction3.png
+		doc\tutorials\img\ganache-keys.png = doc\tutorials\img\ganache-keys.png
+		doc\tutorials\img\ganache-rpc-server.png = doc\tutorials\img\ganache-rpc-server.png
+		doc\tutorials\img\ganache-tx-deploy.png = doc\tutorials\img\ganache-tx-deploy.png
+		doc\tutorials\img\myetherwallet-add-wallet-name-password.png = doc\tutorials\img\myetherwallet-add-wallet-name-password.png
+		doc\tutorials\img\myetherwallet-add-wallet-private-key.png = doc\tutorials\img\myetherwallet-add-wallet-private-key.png
+		doc\tutorials\img\myetherwallet-bob-wallet-after-deploy.png = doc\tutorials\img\myetherwallet-bob-wallet-after-deploy.png
+		doc\tutorials\img\myetherwallet-custom-node-settings.png = doc\tutorials\img\myetherwallet-custom-node-settings.png
+		doc\tutorials\img\myetherwallet-custom-node.png = doc\tutorials\img\myetherwallet-custom-node.png
+		doc\tutorials\img\myetherwallet-deploy-contract.png = doc\tutorials\img\myetherwallet-deploy-contract.png
+		doc\tutorials\img\myetherwallet-interact-contract-read.png = doc\tutorials\img\myetherwallet-interact-contract-read.png
+		doc\tutorials\img\myetherwallet-interact-contract-write.png = doc\tutorials\img\myetherwallet-interact-contract-write.png
+		doc\tutorials\img\myetherwallet-interact-contract.png = doc\tutorials\img\myetherwallet-interact-contract.png
+		doc\tutorials\img\myetherwallet-sign-contract.png = doc\tutorials\img\myetherwallet-sign-contract.png
+		doc\tutorials\img\remix-copy-abi.PNG = doc\tutorials\img\remix-copy-abi.PNG
+		doc\tutorials\img\remix-copy-bytecode.PNG = doc\tutorials\img\remix-copy-bytecode.PNG
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
