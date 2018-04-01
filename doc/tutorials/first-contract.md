@@ -91,7 +91,7 @@ Now unlock the wallet. And fill in a name for the wallet "Bob" and a password
 Now add the wallet. 
 
 
-![alt text](./img/remix-copy-bytecode.png "Logo Title Text 1")
+![alt text](./img/remix-copy-bytecode.PNG "Logo Title Text 1")
 
 Now past in the Deploy contract screen in MyEtherWallet and filter out the bytecode
 
@@ -121,7 +121,7 @@ and copy the ABI.
 
 In Remix:
 
-![alt text](./img/remix-copy-abi.png "Logo Title Text 1")
+![alt text](./img/remix-copy-abi.PNG "Logo Title Text 1")
 
 Resulting Screen in MyEtherWallet
 
