@@ -1,6 +1,6 @@
-## writing our first contract
+## Creating our first contract
 
-In this first tutorial we will create our first contract. For this we have selected some tools, that allow you to 
+In this tutorial we will create our first contract. For this we have selected some tools, that allow you to 
 experiment and interact with the contracts before importing it to the wigo4it blockchain core code where we would 
 then do more extensive testing of its features.
 
@@ -15,8 +15,6 @@ Python and JavaScript and is designed to target the Ethereum Virtual Machine (EV
 
 More information on solidity can be found in this e-book: 
 https://media.readthedocs.org/pdf/solidity/develop/solidity.pdf
-
-
 
 ## Prerequisites
  
@@ -146,8 +144,8 @@ return 50.
 
 ![alt text](./img/myetherwallet-interact-contract-read.png "Logo Title Text 1")
 
-And there you have it, your first contract that writes a setting to to blockchain.
-Ofcourse these manual steps can be automated, which is what we are going to do when writing
+And there you have it, your first contract that writes a setting to the blockchain.
+These manual steps can be automated, which is what we are going to do when writing
 more complex contracts in the next tutorials.
 
 
