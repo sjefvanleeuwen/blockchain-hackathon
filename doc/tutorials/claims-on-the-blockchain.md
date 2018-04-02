@@ -8,22 +8,16 @@ scalability at this point so we can keep the system as simple as possible.
 
 Please consider claims that could be used in this Feature described in Gherkin syntax:
 
-<div id="preview">
-          <p>
-            <strong>Feature</strong>
-          </p>
-          
-          <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #000080; font-weight: bold">Feature:</span> Self reliance
-Citizens that are part of the social care act need products and services to be self reliant
-For this they receive endorsements from district nurses and their township 
+<pre style='color:#000000;background:#ffffff;'><span style='color:#e34adc; '>Feature:</span> Self reliance
+  Citizens that are part of the social care act need products and services to be self reliant
+  For <span style='color:#800000; font-weight:bold; '>this</span> they receive endorsements from district nurses and their township 
 
-  <span style="color: #000080; font-weight: bold">Scenario:</span> Obtain product endorsment
-<span style="color: #000080; font-weight: bold">    Given </span>"<span style="color: #0000FF">Richard</span>" gets an indication for the social care act from "<span style="color: #0000FF">Bob</span>"
-      <span style="color: #000080; font-weight: bold">And </span>"<span style="color: #0000FF">Eline</span>" gives an endorsement for product "<span style="color: #0000FF">Electric Bike</span>"
-     <span style="color: #000080; font-weight: bold">When </span>"<span style="color: #0000FF">Jahir</span>" asks if the endorsement is valid
-     <span style="color: #000080; font-weight: bold">Then </span>the result should be "<span style="color: #0000FF">True</span>"
-</pre></div>
-
+<span style='color:#e34adc; '>Scenario:</span> Obtain product endorsment
+    Given <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Richard</span><span style='color:#800000; '>"</span> <span style='color:#603000; '>gets</span> an indication <span style='color:#800000; font-weight:bold; '>for</span> the social care act from <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Bob</span><span style='color:#800000; '>"</span>
+      And <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Eline</span><span style='color:#800000; '>"</span> gives an endorsement <span style='color:#800000; font-weight:bold; '>for</span> product <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Electric Bike</span><span style='color:#800000; '>"</span>
+     When <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Jahir</span><span style='color:#800000; '>"</span> asks <span style='color:#800000; font-weight:bold; '>if</span> the endorsement is valid
+     Then the result should be <span style='color:#800000; '>"</span><span style='color:#0000e6; '>True</span><span style='color:#800000; '>"</span>
+</pre>
 When we break this down, civil servant Bob should verify the first claim by Richard. He then gets access to services
 rendered to him under the ssocial care act. District Nurse Eline can verify Richard's claim and give him a prescription
 the product can then be delivered by Jahir which can then verify Richard's claim that a registered Nurse has given 
@@ -44,67 +38,61 @@ multiple claims.
 
 3. The code then has a couple of functions to interact with the claims.
 
-<div id="preview">
-          <p>
-            <strong>Complete listing</strong>
-          </p>
-          
-          <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">pragma solidity ^<span style="color: #0000FF">0.4</span>.<span style="color: #0000FF">21</span>;
-<pre>
-contract ClaimAndEndorse {
-  struct ENDORSEMENT {
-  uint creationTime;
- }
- 
- struct CLAIM {
-  uint creationTime;
-  uint claimHash;
-  mapping (address =&gt; ENDORSEMENT) endorsements;
- }
- 
- mapping (address =&gt; 
-  mapping (uint <span style="color: #008800; font-style: italic">/* CLAIM GUID */</span> =&gt; CLAIM)) claims;
- 
- <span style="color: #000080; font-weight: bold">function</span> setClaim(uint claimGuid, uint claimHash) {
-  CLAIM c = claims[msg.sender][claimGuid];
-  <span style="color: #000080; font-weight: bold">if</span>(c.claimHash &gt; <span style="color: #0000FF">0</span>) <span style="color: #000080; font-weight: bold">throw</span>; <span style="color: #008800; font-style: italic">// unset first!</span>
-  c.creationTime = now;
-  c.claimHash = claimHash;
- }
- 
- <span style="color: #000080; font-weight: bold">function</span> unsetClaim(uint claimGuid) {
-  <span style="color: #000080; font-weight: bold">delete</span> claims[msg.sender][claimGuid];
- }
- 
- <span style="color: #000080; font-weight: bold">function</span> setEndorsement(
-  address claimer, uint claimGuid, uint expectedClaimHash
- ) {
-  CLAIM c = claims[claimer][claimGuid];
-  <span style="color: #000080; font-weight: bold">if</span>(c.claimHash != expectedClaimHash) <span style="color: #000080; font-weight: bold">throw</span>;
-  ENDORSEMENT e = c.endorsements[msg.sender];
-  e.creationTime = now;
- }
- 
- <span style="color: #000080; font-weight: bold">function</span> unsetEndorsement(address claimer, uint claimGuid) {
-  <span style="color: #000080; font-weight: bold">delete</span> claims[claimer][claimGuid]
-          .endorsements[msg.sender];
- }
- 
- <span style="color: #000080; font-weight: bold">function</span> checkClaim(
-  address claimer, uint claimGuid, uint expectedClaimHash
- ) constant returns (bool) {
-  <span style="color: #000080; font-weight: bold">return</span> claims[claimer][claimGuid].claimHash 
-         == expectedClaimHash;
- }
- 
- <span style="color: #000080; font-weight: bold">function</span> checkEndorsement(
-  address claimer, uint claimGuid, address endorsedBy
- ) constant returns (bool) {
-  <span style="color: #000080; font-weight: bold">return</span> claims[claimer][claimGuid]
-   .endorsements[endorsedBy].creationTime &gt; <span style="color: #0000FF">0</span>;
- }
-}
-</pre></div>
+<pre style='color:#d1d1d1;background:#000000;'>pragma solidity <span style='color:#d2cd86; '>^</span><span style='color:#009f00; '>0.4</span><span style='color:#d2cd86; '>.</span><span style='color:#008c00; '>21</span><span style='color:#b060b0; '>;</span>
 
+contract ClaimAndEndorse <span style='color:#b060b0; '>{</span>
+  struct ENDORSEMENT <span style='color:#b060b0; '>{</span>
+  uint creationTime<span style='color:#b060b0; '>;</span>
+ <span style='color:#b060b0; '>}</span>
+ 
+ struct CLAIM <span style='color:#b060b0; '>{</span>
+  uint creationTime<span style='color:#b060b0; '>;</span>
+  uint claimHash<span style='color:#b060b0; '>;</span>
+  mapping <span style='color:#d2cd86; '>(</span>address <span style='color:#d2cd86; '>=</span><span style='color:#d2cd86; '>></span> ENDORSEMENT<span style='color:#d2cd86; '>)</span> endorsements<span style='color:#b060b0; '>;</span>
+ <span style='color:#b060b0; '>}</span>
+ 
+ mapping <span style='color:#d2cd86; '>(</span>address <span style='color:#d2cd86; '>=</span><span style='color:#d2cd86; '>></span> 
+  mapping <span style='color:#d2cd86; '>(</span>uint <span style='color:#9999a9; '>/* CLAIM GUID */</span> <span style='color:#d2cd86; '>=</span><span style='color:#d2cd86; '>></span> CLAIM<span style='color:#d2cd86; '>)</span><span style='color:#d2cd86; '>)</span> claims<span style='color:#b060b0; '>;</span>
+ 
+ <span style='color:#e66170; font-weight:bold; '>function</span> setClaim<span style='color:#d2cd86; '>(</span>uint claimGuid<span style='color:#d2cd86; '>,</span> uint claimHash<span style='color:#d2cd86; '>)</span> <span style='color:#b060b0; '>{</span>
+  CLAIM c <span style='color:#d2cd86; '>=</span> claims<span style='color:#d2cd86; '>[</span>msg<span style='color:#d2cd86; '>.</span>sender<span style='color:#d2cd86; '>]</span><span style='color:#d2cd86; '>[</span>claimGuid<span style='color:#d2cd86; '>]</span><span style='color:#b060b0; '>;</span>
+  <span style='color:#e66170; font-weight:bold; '>if</span><span style='color:#d2cd86; '>(</span>c<span style='color:#d2cd86; '>.</span>claimHash <span style='color:#d2cd86; '>></span> <span style='color:#008c00; '>0</span><span style='color:#d2cd86; '>)</span> <span style='color:#e66170; font-weight:bold; '>throw</span><span style='color:#b060b0; '>;</span> <span style='color:#9999a9; '>// unset first!</span>
+  c<span style='color:#d2cd86; '>.</span>creationTime <span style='color:#d2cd86; '>=</span> now<span style='color:#b060b0; '>;</span>
+  c<span style='color:#d2cd86; '>.</span>claimHash <span style='color:#d2cd86; '>=</span> claimHash<span style='color:#b060b0; '>;</span>
+ <span style='color:#b060b0; '>}</span>
+ 
+ <span style='color:#e66170; font-weight:bold; '>function</span> unsetClaim<span style='color:#d2cd86; '>(</span>uint claimGuid<span style='color:#d2cd86; '>)</span> <span style='color:#b060b0; '>{</span>
+  <span style='color:#e66170; font-weight:bold; '>delete</span> claims<span style='color:#d2cd86; '>[</span>msg<span style='color:#d2cd86; '>.</span>sender<span style='color:#d2cd86; '>]</span><span style='color:#d2cd86; '>[</span>claimGuid<span style='color:#d2cd86; '>]</span><span style='color:#b060b0; '>;</span>
+ <span style='color:#b060b0; '>}</span>
+ 
+ <span style='color:#e66170; font-weight:bold; '>function</span> setEndorsement<span style='color:#d2cd86; '>(</span>
+  address claimer<span style='color:#d2cd86; '>,</span> uint claimGuid<span style='color:#d2cd86; '>,</span> uint expectedClaimHash
+ <span style='color:#d2cd86; '>)</span> <span style='color:#b060b0; '>{</span>
+  CLAIM c <span style='color:#d2cd86; '>=</span> claims<span style='color:#d2cd86; '>[</span>claimer<span style='color:#d2cd86; '>]</span><span style='color:#d2cd86; '>[</span>claimGuid<span style='color:#d2cd86; '>]</span><span style='color:#b060b0; '>;</span>
+  <span style='color:#e66170; font-weight:bold; '>if</span><span style='color:#d2cd86; '>(</span>c<span style='color:#d2cd86; '>.</span>claimHash <span style='color:#d2cd86; '>!=</span> expectedClaimHash<span style='color:#d2cd86; '>)</span> <span style='color:#e66170; font-weight:bold; '>throw</span><span style='color:#b060b0; '>;</span>
+  ENDORSEMENT e <span style='color:#d2cd86; '>=</span> c<span style='color:#d2cd86; '>.</span>endorsements<span style='color:#d2cd86; '>[</span>msg<span style='color:#d2cd86; '>.</span>sender<span style='color:#d2cd86; '>]</span><span style='color:#b060b0; '>;</span>
+  e<span style='color:#d2cd86; '>.</span>creationTime <span style='color:#d2cd86; '>=</span> now<span style='color:#b060b0; '>;</span>
+ <span style='color:#b060b0; '>}</span>
+ 
+ <span style='color:#e66170; font-weight:bold; '>function</span> unsetEndorsement<span style='color:#d2cd86; '>(</span>address claimer<span style='color:#d2cd86; '>,</span> uint claimGuid<span style='color:#d2cd86; '>)</span> <span style='color:#b060b0; '>{</span>
+  <span style='color:#e66170; font-weight:bold; '>delete</span> claims<span style='color:#d2cd86; '>[</span>claimer<span style='color:#d2cd86; '>]</span><span style='color:#d2cd86; '>[</span>claimGuid<span style='color:#d2cd86; '>]</span>
+          <span style='color:#d2cd86; '>.</span>endorsements<span style='color:#d2cd86; '>[</span>msg<span style='color:#d2cd86; '>.</span>sender<span style='color:#d2cd86; '>]</span><span style='color:#b060b0; '>;</span>
+ <span style='color:#b060b0; '>}</span>
+ 
+ <span style='color:#e66170; font-weight:bold; '>function</span> checkClaim<span style='color:#d2cd86; '>(</span>
+  address claimer<span style='color:#d2cd86; '>,</span> uint claimGuid<span style='color:#d2cd86; '>,</span> uint expectedClaimHash
+ <span style='color:#d2cd86; '>)</span> constant returns <span style='color:#d2cd86; '>(</span>bool<span style='color:#d2cd86; '>)</span> <span style='color:#b060b0; '>{</span>
+  <span style='color:#e66170; font-weight:bold; '>return</span> claims<span style='color:#d2cd86; '>[</span>claimer<span style='color:#d2cd86; '>]</span><span style='color:#d2cd86; '>[</span>claimGuid<span style='color:#d2cd86; '>]</span><span style='color:#d2cd86; '>.</span>claimHash 
+         <span style='color:#d2cd86; '>==</span> expectedClaimHash<span style='color:#b060b0; '>;</span>
+ <span style='color:#b060b0; '>}</span>
+ 
+ <span style='color:#e66170; font-weight:bold; '>function</span> checkEndorsement<span style='color:#d2cd86; '>(</span>
+  address claimer<span style='color:#d2cd86; '>,</span> uint claimGuid<span style='color:#d2cd86; '>,</span> address endorsedBy
+ <span style='color:#d2cd86; '>)</span> constant returns <span style='color:#d2cd86; '>(</span>bool<span style='color:#d2cd86; '>)</span> <span style='color:#b060b0; '>{</span>
+  <span style='color:#e66170; font-weight:bold; '>return</span> claims<span style='color:#d2cd86; '>[</span>claimer<span style='color:#d2cd86; '>]</span><span style='color:#d2cd86; '>[</span>claimGuid<span style='color:#d2cd86; '>]</span>
+   <span style='color:#d2cd86; '>.</span>endorsements<span style='color:#d2cd86; '>[</span>endorsedBy<span style='color:#d2cd86; '>]</span><span style='color:#d2cd86; '>.</span>creationTime <span style='color:#d2cd86; '>></span> <span style='color:#008c00; '>0</span><span style='color:#b060b0; '>;</span>
+ <span style='color:#b060b0; '>}</span>
+<span style='color:#b060b0; '>}</span>
+</pre>
 
 Todo: Unfinished: Part II
