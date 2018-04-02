@@ -36,6 +36,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wigo4It.Blockchain.Core.Tes
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tutorials", "tutorials", "{9C2A2C57-1651-4E26-BC5D-9B6681D3F1E2}"
 	ProjectSection(SolutionItems) = preProject
+		doc\tutorials\claims-on-the-blockchain.md = doc\tutorials\claims-on-the-blockchain.md
 		doc\tutorials\first-contract.md = doc\tutorials\first-contract.md
 	EndProjectSection
 EndProject
