@@ -1,7 +1,7 @@
 ## Creating our first contract
 
 In this tutorial we will create our first contract. For this we have selected some tools, that allow you to 
-experiment and interact with the contracts before importing it to the wigo4it blockchain core code where we would 
+experiment and interact with the contracts before importing it to the WIGO4IT blockchain core code where we would 
 then do more extensive testing of its features.
 
 We will be programming the contract for Ethereum in a language called solidity.
@@ -24,7 +24,7 @@ https://media.readthedocs.org/pdf/solidity/develop/solidity.pdf
   <br/> You need a wallet. You can either run it as a stand alone wallet or download it as a chrome extension. https://github.com/kvhnuke/etherwallet/releases
    we will using the chrome extension.
 * __Solidity Remix__
-  <br/> Finally we can browse to an online solidty contract editor called Remix. Remix can be found at: https://remix.ethereum.org/
+  <br/> Finally we can browse to an online solidity contract editor called Remix. Remix can be found at: https://remix.ethereum.org/
 
 ## Setting up our Wallet and private Blockchain Node
 
@@ -69,9 +69,9 @@ contract SimpleStorage {
 ```
 
 Now compile the code in the remix editor by clicking "Start to compile" button.
-Once compiled, click the [copy icon] to copy the bytcode in the appearing screen.
+Once compiled, click the [copy icon] to copy the bytecode in the appearing screen.
 
-From Genache klik on thee "Key" icon from the first address, a screen will apear
+From Ganache click on thee "Key" icon from the first address, a screen will appear
 showing the public and private key of this account.
 
 ![alt text](./img/ganache-keys.png "Logo Title Text 1")
@@ -96,7 +96,7 @@ Now past in the Deploy contract screen in MyEtherWallet and filter out the bytec
 ![alt text](./img/myetherwallet-deploy-contract.png "Logo Title Text 1")
 
 Now scroll down and import the previously added account "Bob" to upload the contract with.
-By default Genache charges a small amount of ETH to deploy the contract. When going back
+By default Ganache charges a small amount of ETH to deploy the contract. When going back
 to Bobs Wallet in MyEtherWallet you can see Bobs new ETH balance.
 
 
@@ -107,7 +107,7 @@ for Bob.
 
 ![alt text](./img/ganache-tx-deploy.png "Logo Title Text 1")
 
-__!Note__: You don't see a balance difference in Genache, as the it is rounded on two 
+__!Note__: You don't see a balance difference in Ganache, as the it is rounded on two 
 decimals.
 
 Head to Ganache to Copy the "Created Contract Address" to let us interact with the contract.

@@ -12,14 +12,14 @@ Please consider claims that could be used in this Feature described in Gherkin s
   Citizens that are part of the social care act need products and services to be self reliant
   For <span style='color:#800000; font-weight:bold; '>this</span> they receive endorsements from district nurses and their township 
 
-<span style='color:#e34adc; '>Scenario:</span> Obtain product endorsment
+<span style='color:#e34adc; '>Scenario:</span> Obtain product endorsement
     Given <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Richard</span><span style='color:#800000; '>"</span> <span style='color:#603000; '>gets</span> an indication <span style='color:#800000; font-weight:bold; '>for</span> the social care act from <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Bob</span><span style='color:#800000; '>"</span>
       And <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Eline</span><span style='color:#800000; '>"</span> gives an endorsement <span style='color:#800000; font-weight:bold; '>for</span> product <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Electric Bike</span><span style='color:#800000; '>"</span>
      When <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Jahir</span><span style='color:#800000; '>"</span> asks <span style='color:#800000; font-weight:bold; '>if</span> the endorsement is valid
      Then the result should be <span style='color:#800000; '>"</span><span style='color:#0000e6; '>True</span><span style='color:#800000; '>"</span>
 </pre>
 When we break this down, civil servant Bob should verify the first claim by Richard. He then gets access to services
-rendered to him under the ssocial care act. District Nurse Eline can verify Richard's claim and give him a prescription
+rendered to him under the social care act. District Nurse Eline can verify Richard's claim and give him a prescription
 the product can then be delivered by Jahir which can then verify Richard's claim that a registered Nurse has given 
 him the prescription. 
 
@@ -30,7 +30,7 @@ bitcoin. This way Richard does not have to wait for funds to be released and can
 
 ## Modeling A Generic Claims contract in Solidity
 
-1. Underlaying code, defines two structs, CLAIM has a 1..n mapping to the ENDORSEMENT struct. Thus a claim can hold
+1. Under laying code, defines two structs, CLAIM has a 1..n mapping to the ENDORSEMENT struct. Thus a claim can hold
 multiple endorsements issued by an address.
 
 2. The direct mapping on the contract itself allows the mapping of an address to multiple claims. So an address can hold
@@ -96,3 +96,23 @@ contract ClaimAndEndorse <span style='color:#b060b0; '>{</span>
 </pre>
 
 Todo: Unfinished: Part II
+
+Use case: Social Care Act Claim and Endorsement
+
+Richard claims he has right to the Social Care Act.
+
+contract.setClaim(400004 /* GUID for the Social Care Act,HASH("Bob"))
+
+Bob confirms this
+
+contract.setEndorsement("Richard",400004)
+
+Use case: Endorsement for the product
+
+Eline can read the claim and sets the endorsement for
+Richard.
+
+contract.setClaim(1231 /* GUID for an electric bike,HASH("Eline));
+
+contract.setEndorsement("Richard",1231);
+

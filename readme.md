@@ -31,9 +31,15 @@ For the hackathons we primarily use the following toolset:
   * <a href="https://github.com/SmartIdentity/smartId-contracts" title="Smart Identity">Smart Identity</a> contracts
   * <a href="https://github.com/Nethereum/abi-code-gen" title="abi-code-gen">abi-code-gen</a> for binding .NET to solidity smart-contracts 
 
+For experimentation we use a somewhat different toolset. This is to create and test
+contracts without the need for SOLID development, but rather scripting in solidity and
+manually interact with the wallet and blockchain
+
+You can find these in the tutorials section.
+
 # Personas
 
-Hackaton challenges inherently develop our personas on the blockchain. Personas enable us to model complex processes as they progress around feature driven development. Although it's unknown at this time what the challenges will be, they will be focussed around social development within the three work domains WIGO4IT operates in, being: Care, Work and Income.
+Hackathon challenges inherently develop our personas on the blockchain. Personas enable us to model complex processes as they progress around feature driven development. Although it's unknown at this time what the challenges will be, they will be focused around social development within the three work domains WIGO4IT operates in, being: Care, Work and Income.
 
 As a precondition, each persona is setup with at least their picture, first name and and Ethereum address.
 
